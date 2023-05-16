@@ -193,13 +193,13 @@
                             <input type=\"radio\" id=\"rate2\" name=\"rating\" value=\"4\" />
                             <label for=\"rate2\" title=\"Très bon\"></label>
 
-                            <input type=\"radio\" id=\"rate1\" name=\"rating\" value=\"5\" />
+                            <input type=\"radio\" id=\"rate1\" name=\"rating\" checked value=\"5\" />
                             <label for=\"rate1\" title=\"Parfait\"></label>
                         </fieldset>
 
                         <label>Commentez ici : </label>
                         <br>
-                        <TextArea name=\"commentaire\" maxlength=\"150\" style=\"font-size:2em ;width:80%; height: 7em;outline: 3px black solid; border-radius:1em;\"></TextArea>
+                        <TextArea name=\"commentaire\" maxlength=\"80\" style=\"font-size:2em ;width:80%; height: 7em;outline: 3px black solid; border-radius:1em;\"></TextArea>
                         <br>
                         <input type=\"hidden\" name=\"id\" value=". $rows['id'] ." />
                         <input class=\"styleBoutton\" type=\"submit\" name=\"ENVOYER\" value=\"ENVOYER\"/>

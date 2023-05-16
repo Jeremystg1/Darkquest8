@@ -130,8 +130,7 @@ validerReponse();
         linear-gradient(to right, #988f9c 50%, red 0);
     }
 
-    .stats
-    {
+    .stats {
       text-align: center;
       font-weight: bold;
       color: whitesmoke;
@@ -192,31 +191,33 @@ validerReponse();
   function afficherWinRatio() ////
   {
     $idJoueur = $_SESSION['userid'];
-    $winRatio = getWinJoueur($idJoueur) / getNbQuestionReponduJoueur($idJoueur) * 100;
-    //echo "<div>" . $winRatio . "%</div>";
+    if (getNbQuestionReponduJoueur($idJoueur) != 0) {
 
-    $winRatio = round($winRatio, 2);
+      $winRatio = getWinJoueur($idJoueur) / getNbQuestionReponduJoueur($idJoueur) * 100;
+      //echo "<div>" . $winRatio . "%</div>";
+      $winRatio = round($winRatio, 2);
 
-    echo '<div class="wrapper">';
-    echo '<div class="boxW" style="--p:' . $winRatio . ';"><div class="stats">' .$winRatio .'%</div></div>';
+      echo '<div class="wrapper">';
+      echo '<div class="boxW" style="--p:' . $winRatio . ';"><div class="stats">' . $winRatio . '%</div></div>';
+    }
   }
 
   function afficherLossRatio() ////
   {
     $idJoueur = $_SESSION['userid'];
+    if (getNbQuestionReponduJoueur($idJoueur) != 0) {
+      
+      $lossRatio = getLossJoueur($idJoueur) / getNbQuestionReponduJoueur($idJoueur) * 100;
 
+      $lossRatio = round($lossRatio, 2);
 
-    $lossRatio = getLossJoueur($idJoueur) / getNbQuestionReponduJoueur($idJoueur) * 100;
-    
-    $lossRatio = round($lossRatio, 2);
-
-    //echo "<div>" . $lossRatio . "%</div>";
-    echo '<div class="boxL" style="--p:' . $lossRatio . ';"><div class="stats">' .$lossRatio .'%</div></div>';
-    echo '</div>';
-
+      //echo "<div>" . $lossRatio . "%</div>";
+      echo '<div class="boxL" style="--p:' . $lossRatio . ';"><div class="stats">' . $lossRatio . '%</div></div>';
+      echo '</div>';
+    }
   }
 
- 
+
 
 
   function afficherEnigme($difficulte)

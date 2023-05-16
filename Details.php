@@ -368,23 +368,26 @@
                     inner join joueurs j on j.id = i.joueurs_id 
                     where i.items_id =".$_GET["id"];
             $table = executerSelectTable($sql);
+
             while($rows = $table->fetch()){
                 if(isset($_SESSION["userid"])){
                     //verifie sur le user est un admin ou si c<Est lui qui a publier le commentaire
                     if($admin || $_SESSION["userid"] == $rows["id"]){
-                        echo "<tr>
-                                    <td><p class='pcom'>".$rows['commentaire']."</p></td>
+                        echo"<tr>
+                                    <td><div>".strval($rows["commentaire"])."</div></td>
                                     <td>".$rows['alias']."</td>
                                     <td>".$rows['review']."⭐</td>
-                                    <td><form>
-                                    <a href='".getAppRoot()."/phps/evaluationsManager.php?SupComm=" . $rows['Id'] . "&IdItem=".$_GET["id"] . "'><input class=\"styleBoutton\" type=\"button\" value=\"SUPPRIMER\"/></a>
-                                    </form></td>
-                                <tr>";
+                                    <td>
+                                        <form>
+                                            <a href='".getAppRoot()."/phps/evaluationsManager.php?SupComm=" . $rows['Id'] . "&IdItem=".$_GET["id"] . "'><input class=\"styleBoutton\" type=\"button\" value=\"SUPPRIMER\"/></a>
+                                        </form>
+                                    </td>
+                             <tr>";
                     }else{
-                        echo '<tr><td><p class="pcom">'.$rows["commentaire"].'</p></td><td>'.$rows["alias"].'</td><td>'.$rows['review'].'⭐</td><td></td><tr>';
+                        echo '<tr><td><div>'.$rows["commentaire"].'</div></td><td>'.$rows["alias"].'</td><td>'.$rows['review'].'⭐</td><td></td><tr>';
                     }
                 }else{
-                    echo '<tr><td><p class="pcom">'.$rows["commentaire"].'</p></td><td>'.$rows["alias"].'</td><td> '.$rows['review'].'⭐</td><tr>';
+                    echo '<tr><td><div>'.$rows["commentaire"].'</div></td><td>'.$rows["alias"].'</td><td> '.$rows['review'].'⭐</td><tr>';
                 }
             }
             echo '</table>';

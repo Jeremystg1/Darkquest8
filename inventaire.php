@@ -245,6 +245,28 @@ activerSessionSurPage();
   <div id="scroll">
     <div class="itemsTable">
       <?php 
+      function getInventaireIdFromUserWithIdItem($idItem){
+        $sql = "SELECT Id FROM inventaire WHERE joueurs_id = :jid AND items_id=:iid";
+        $jid = $_SESSION["userid"];
+        $rows = executerSelectUneLigneObtenirTable($sql,[":jid" => $jid, ":iid" => $idItem]);
+        if(empty($rows["Id"])){
+          return -1;
+        }
+        return $rows["Id"];
+    }
+    function déjaCommenté($idItem){
+      $sql = "SELECT Id FROM evaluations WHERE inventaire_Id = :iid";
+      $jid = $_SESSION["userid"];
+      $rows = executerSelectUneLigneObtenirTable($sql,[":iid" => $idItem]);
+      if(empty($rows["Id"])){return false;}
+      return true;
+    }
+      function obtenirSiPeutCommenter($idItem){
+        $idInv = getInventaireIdFromUserWithIdItem($idItem);
+        if(!déjaCommenté($idInv)){return "style='display:'";}
+        return "style='display: none;'";
+      }
+
       $sql = "select * from inventaire i 
           inner join items it on it.id = i.items_id 
           where joueurs_id = " . $_SESSION["userid"];
@@ -261,9 +283,8 @@ activerSessionSurPage();
 
                     //'<div class="detailsButton"><form method="GET"><input type="hidden" value="' . $rows["items_id"] . '" name="idItem" ><input type="hidden" SUBMIT value="Vendre" name="vendre" class="styleBoutton"></form></div>'.
                     //'<div class="detailsButton"><form method="GET"><input type="hidden" value="' . $rows["items_id"] . '" name="idItem" ><input type="hidden"SUBMIT value="Vendre tout" name="vendreTout" class="styleBoutton"></form></div>
-                    '<div class="detailsButton">
-                        <div>
-                          <a class="detailsText" href="./commentaireForm.php?id=' . $rows['id'], '">Commentez</a>
+                    '<div class="detailsButton" ' . obtenirSiPeutCommenter($rows["id"]). '>
+                        <div> <a class="detailsText" href="./commentaireForm.php?id=' . $rows["id"]. '">Commentez</a>
                         </div>
                     </div>
                 </div>';
