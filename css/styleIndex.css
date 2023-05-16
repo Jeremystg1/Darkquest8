@@ -1,0 +1,290 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../Images/Dark-brick.jpg");
+}
+@keyframes slideInFromLeft {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  .headerGenere, #item, p, h1, h2, h3, h4, span, div, a, select, input, label, legend{
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+p, h1, h2, h3, h4, span, div, a, select, input, label, legend{
+    font-family: MedievalSharp;
+}
+.soldeGrid{
+    display: grid;
+    margin-right: 0.1em;
+    margin-left: 0.1em;
+}
+.stats{
+    min-width: 1em;
+    display: flex;
+    max-width: 2em;
+    position: relative;
+    min-height: 1em;
+    max-height: 2em;
+    justify-content: center;
+    margin: auto;
+}
+.adminIcon{
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    margin-top: 0.25em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 3em;
+    width: 3em;
+    transition: .2s;
+    z-index: 5000;
+}
+.adminIcon:hover{
+    width: 3.5em;
+    height: 3.5em;
+    background-color: transparent;
+    border-bottom: white solid 4px;
+}
+#pill{
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    width: max-content;
+    height: min-content;
+    margin: auto;
+    padding: 0.5em;
+    position: relative;
+    display: flex;
+}
+#userNameDisplay{
+    text-align: center;
+    margin: auto;
+    margin-top: 4em;
+    height: 3em;
+    width: 20em;
+    justify-content: center;
+    background-color: rgb(121, 65, 225);
+    border-radius: 15px;
+    border: 4px solid rgba(0, 0, 0, 0.553);
+}
+@media (orientation: landscape) {
+    #PhoneTitle{
+        line-height: 2em;
+    }
+}   
+#statBar{
+    background-color: rgb(101, 35, 205);
+    height: 5em;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin: auto;
+    max-width: 15em;
+    z-index: 2000;
+    border-bottom: 4px solid black;
+}
+.headerGenere{
+    top:0px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 1000;
+    background-color:rgb(121, 65, 225);
+    width: 100%;
+    height: 2.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,20%);
+    border-bottom:4px solid rgba(0, 0, 0, 0.553);
+    /*display: inline-block;*/
+}
+@media (orientation: portrait) {
+    #PhoneTitle{
+        line-height: 1em;
+    }
+    .headerGenere{
+        grid-template-columns: repeat(auto-fit,33.3333%);
+    }
+    .invisMobil{
+        display: none;
+    }
+    #userNameDisplay{
+        margin-top: 1em;
+    }
+    #statBar{
+        display: none;
+    }
+} 
+#btnmenuhomeheader{
+    transition: .2s;
+}
+#btnmenuhomeheader:hover{
+    text-shadow: 0 0px 10px black;
+}
+.bleuFoncé{
+    background-color: rgb(121, 65, 225);
+}
+.headerGenere>.divEspace{
+    width: auto;
+    height: 50px;
+}
+.btnDeconnexion{
+    width: 90%;
+    height: auto;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px red;
+    transition: .2s;
+}
+.btnDeconnexion:hover{
+    font-weight: bolder;
+    background-color: rgb(89, 42, 177);
+}
+#espaceur{
+    top:0px;
+    text-decoration: none;
+    width: 100%;
+    height: 2.5em;
+}
+.btnDeconnexionVert{
+    width: 90%;
+    height: auto;
+    color: greenyellow;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px greenyellow;
+    transition: .2s;
+}
+.btnDeconnexionVert:hover{
+    font-weight: bolder;
+    background-color: rgb(89, 42, 177);
+}
+
+.formeOuInscrip > fieldset{
+    text-align: center;
+    width: 20em;
+    min-width: 30%;
+    height: 20em;
+    background-color: blueviolet;
+    border-radius: 1em;
+    color: white;
+    margin: auto;
+}
+.formeOuInscrip>fieldset>legend{
+    font-weight: bolder;
+}
+.formeOuInscrip>fieldset>input[type="text"]{
+    width: 98%;
+}
+.formeOuInscrip>fieldset>input[type="submit"]{
+    width: 60%;
+    background-color: greenyellow;
+    color: black;
+    font-weight: bolder;
+    transition: .2s;
+}
+.formeOuInscrip>fieldset>input[type="submit"]:hover{
+    width: 70%;
+    background-color: green;
+    color: white;
+}
+.formeOuInscrip>fieldset>a#pasDeCompteLoginForm{
+    display: block;
+    width: 60%;
+    margin: auto;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .2s;
+}
+.formeOuInscrip>fieldset>a#pasDeCompteLoginForm:hover{
+    width: 70%;
+    background-color: orange;
+    font-weight: bolder;
+    color: black;
+}
+.zoneEnigme{
+    background-color: rgb(57, 57, 57);
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 10px 50px, rgba(0, 0, 0, 0.52) 0px -12px 30px, rgba(0, 0, 0, 0.52) 0px 4px 6px, rgba(0, 0, 0, 0.57) 0px 12px 13px, rgba(0, 0, 0, 0.59) 0px -3px 5px;
+
+}
+.enigmaBubble{
+    text-align: center;
+    display:grid;
+    height: 4em;
+    border: none;
+    justify-content: center;
+    background-color: #333333;
+    width: 60%;
+    margin: auto;
+    border-radius: 1000px;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.553);
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 10px 50px, rgba(0, 0, 0, 0.52) 0px -12px 30px, rgba(0, 0, 0, 0.52) 0px 4px 6px, rgba(0, 0, 0, 0.57) 0px 12px 13px, rgba(0, 0, 0, 0.59) 0px -3px 5px;
+}
+.leafs{
+    background-size: contain;
+    width: 300%;
+    height: 300px;
+    margin-top: 0em;
+}
+.firstBubble{
+    background-color: #9700fd6e;
+    height: fit-content;
+    min-height: 4em;
+}
+.enigmaText{
+    color:white;
+    font-weight: lighter;
+    font-size: 17px;
+}
+.enigmaText:hover{
+    font-weight: bold;
+}
+#rechercheFormIndex{
+    text-align: center;
+    margin: auto;
+    width: 15em;
+    max-width: 50%;
+    height: fit-content;
+    color: white;
+    background-color: #333333;
+    outline: black 4px solid;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 10px 50px;
+}
+.iconRows{
+    display: flex;
+    justify-content: center;
+}
+.icon{
+    margin-top: 0.25em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2em;
+    width: 2em;
+    transition: .2s;
+}
+.icon:hover{
+    width: 2.5em;
+    height: 2.5em;
+    background-color: transparent;
+    border-bottom: white solid 4px;
+}
+.iconLink{
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 2em;
+}
+
+

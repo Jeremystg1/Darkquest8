@@ -1,0 +1,9 @@
+.divItemElementGenere>div{
+    width: 60%;
+    height: 4em;
+    background-color: purple;
+}
+
+#_alertc{
+    transition: 1s;
+}

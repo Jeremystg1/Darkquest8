@@ -1,0 +1,47 @@
+[
+  {
+    "cruiseLine": "Norwegian",
+    "croisieres": [
+      {"depart": "Rome", "nbreJours": "7", "destination":"Mer Méditerranée", "surPageAccueil":1},
+      {"depart": "Miami", "nbreJours": "9","destination":"Caraibes", "surPageAccueil":1},
+      {"depart": "Dubai", "nbreJours": "11","destination":"Asie", "surPageAccueil":0},
+      {"depart": "Dubai", "nbreJours": "5","destination":"Moyen Orient", "surPageAccueil":0},
+      {"depart": "Barcelone", "nbreJours": "7","destination":"Afrique Centrale", "surPageAccueil":0},
+      {"depart": "Barcelone", "nbreJours": "13","destination":"Europe du Nord", "surPageAccueil":0}
+    ]
+  },
+  {
+    "cruiseLine": "Carnival Cruise Line",
+    "croisieres": [
+      { "depart":"Seattle, WA", "nbreJours":"15","destination":"Alaska", "surPageAccueil":1},
+      {"depart": "Orlando, FL", "nbreJours":"5","destination":"Bahamas", "surPageAccueil":1},
+      {"depart":"Miami, F", "nbreJours":"7","destination":"Mexique", "surPageAccueil":0},
+      {"depart": "Sydney, Australie","nbreJours": "9","destination":"Nouvelle Zélande", "surPageAccueil":0}
+    ]
+  },
+  {
+    "cruiseLine": "Celebrity",
+    "croisieres": [
+      {"depart": "Miami,Fl", "nbreJours": "7","destination":"Caraibes", "surPageAccueil":1},
+      {"depart": "Singapour", "nbreJours": "12","destination":"Asie", "surPageAccueil":0}, 
+      {"depart": "Vancouver, BC", "nbreJours": "7","destination":"Alaska", "surPageAccueil":1},
+      {"depart": "Miami, Fl", "nbreJours": "12","destination":"Mexique", "surPageAccueil":0}
+    ]
+  },
+  {
+    "cruiseLine": "Royal Caribbean",
+    "croisieres":[
+      { "depart":"Vancouver,BC", "nbreJours":"7","destination":"Alaska", "surPageAccueil":0},
+      {"depart": "Orlando, FL", "nbreJours":"5","destination":"Bahamas", "surPageAccueil":1},
+      {"depart":"Galveston, Texas,", "nbreJours":"7","destination":"Mexique", "surPageAccueil":1},
+      {"depart": "Sydney, Australie", "nbreJours":"7","destination":"Nouvelle Zélande", "surPageAccueil":0}
+      ]
+  },
+  {
+    "cruiseLine": "Holland America Line",
+    "croisieres": [
+      {"depart": "Orlando, FL", "nbreJours":"5","destination":"Bahamas","surPageAccueil":1},
+      {"depart":"Miami, F", "nbreJours":"7","destination":"Mexique","surPageAccueil":1}
+    ]
+  }
+]
